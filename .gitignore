@@ -50,6 +50,9 @@ env/
 *.swo
 *~
 
+# Code Quality Tools
+.codacy/
+
 # OS
 .DS_Store
 .DS_Store?
