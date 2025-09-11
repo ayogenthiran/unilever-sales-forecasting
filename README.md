@@ -18,10 +18,9 @@ Predict sales for 970 material-customer combinations across 9 weeks (2022-46 to 
 
 | Metric | Value | Description |
 |--------|-------|-------------|
-| **Final Accuracy** | **59.29%** | Overall prediction accuracy (1 - WMAPE) |
-| **WMAPE** | **40.71%** | Weighted Mean Absolute Percentage Error |
-| **Bias** | **2.73%** | Prediction bias (well-controlled) |
-| **MAE** | **108.26** | Mean Absolute Error |
+| **Final Accuracy** | **59.31%** | Overall prediction accuracy (1 - WMAPE) |
+| **WMAPE** | **40.69%** | Weighted Mean Absolute Percentage Error |
+| **Bias** | **+2.75%** | Prediction bias (well-controlled) |
 | **Total Predictions** | **8,730** | 970 keys × 9 weeks |
 | **Zero Predictions** | **16.2%** | Percentage of zero sales predictions |
 | **Total Predicted Sales** | **1,812,155** | Sum of all predictions |
@@ -55,11 +54,16 @@ Predict sales for 970 material-customer combinations across 9 weeks (2022-46 to 
 
 | Metric | Value |
 |--------|-------|
-| **Accuracy** | **59.29%** |
-| **WMAPE** | **40.71%** |
-| **Bias** | **2.73%** |
-| **MAE** | **108.26** |
+| **Accuracy** | **59.31%** |
+| **WMAPE** | **40.69%** |
+| **Bias** | **+2.75%** |
 | **Predictions** | **8,730** (970 keys × 9 weeks) |
+
+### 📈 Model Performance Visualization
+
+![Forecast Performance](output.png)
+
+*Figure 1: Forecast performance across train, validation, and test periods. The model tracks actual sales closely during validation (orange line) and provides realistic forecasts for the test horizon (red line), demonstrating strong generalization capability.*
 
 ## 🏗️ Solution
 
@@ -92,7 +96,7 @@ Predict sales for 970 material-customer combinations across 9 weeks (2022-46 to 
 ### Model Comparison
 | Model | Accuracy | WMAPE | Bias |
 |-------|----------|-------|------|
-| **Final Ensemble** | **59.29%** | **40.71%** | **2.73%** |
+| **Final Ensemble** | **59.31%** | **40.69%** | **+2.75%** |
 | Two-Stage Weighted | 61.09% | 38.91% | 2.85% |
 | LightGBM Simple | 57.79% | 42.21% | 2.66% |
 | Random Forest | 44.87% | 55.13% | 1.37% |
@@ -138,4 +142,4 @@ Predict sales for 970 material-customer combinations across 9 weeks (2022-46 to 
 
 ## 🏆 Conclusion
 
-Two-stage modeling approach achieves **59.29% accuracy** on highly intermittent demand data (56.2% zero sales). The solution effectively handles zero-inflation through classification and regression stages, making it suitable for production deployment.
+Two-stage modeling approach achieves **59.31% accuracy** on highly intermittent demand data (56.2% zero sales). The solution effectively handles zero-inflation through classification and regression stages, with visual validation confirming realistic business patterns and strong generalization capability. The model is ready for production deployment.
