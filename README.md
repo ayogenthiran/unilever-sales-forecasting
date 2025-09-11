@@ -18,12 +18,10 @@ Predict sales for 970 material-customer combinations across 9 weeks (2022-46 to 
 
 | Metric | Value | Description |
 |--------|-------|-------------|
-| **Final Accuracy** | **59.31%** | Overall prediction accuracy (1 - WMAPE) |
-| **WMAPE** | **40.69%** | Weighted Mean Absolute Percentage Error |
-| **Bias** | **+2.75%** | Prediction bias (well-controlled) |
 | **Total Predictions** | **8,730** | 970 keys × 9 weeks |
 | **Zero Predictions** | **16.2%** | Percentage of zero sales predictions |
 | **Total Predicted Sales** | **1,812,155** | Sum of all predictions |
+| **Bias** | **+2.75%** | Prediction bias (well-controlled) |
 
 ## 🏗️ Technical Architecture
 
@@ -63,7 +61,9 @@ Predict sales for 970 material-customer combinations across 9 weeks (2022-46 to 
 
 ![Forecast Performance](output.png)
 
-*Figure 1: Forecast performance across train, validation, and test periods. The model tracks actual sales closely during validation (orange line) and provides realistic forecasts for the test horizon (red line), demonstrating strong generalization capability.*
+*Figure 1: Forecast performance across train, validation, and test periods.* 
+
+The model tracks actual sales closely during validation (orange line) and provides realistic forecasts for the test horizon (red line), demonstrating strong generalization capability.
 
 ## 🏗️ Solution
 
